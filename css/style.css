@@ -1,0 +1,68 @@
+.fancy-header {
+    text-align: center;
+    color: #00857D;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+.subhead {
+    text-align: center;
+    color: #008559;
+}
+
+h2, h3 {
+    color: #008559;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/f8/f4/dd/f8f4ddbcb54eb102d1c4b267e843061a.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+}
+
+ol {
+    list-style: lower-roman;
+}
+
+ul {
+    list-style: circle;
+}
+
+th {
+    background-color: #00857D;
+    color: #93FFDB;
+    height: 50px;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+}
+tr:hover {
+    background-color: #009966;
+    color: #93FFDB;
+}
+
+a:link, a:visited {
+    background-color: #008559;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 96%
+}
+
+a:hover, a:active {
+    background-color: #00857D;
+    color: #93FFDB;
