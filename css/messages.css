@@ -6,87 +6,58 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-.message-info {
-    color: #3B3495;
-    background-color: #CDDEFF;
+.message {
     width: 96%;
     padding: .5em;
     margin: 1em;
-    border: #3B3495 solid 1px;
     border-radius: 5px;
+}
+.message-info {
+    color: #3B3495;
+    background-color: #CDDEFF;
+    border: #3B3495 solid 1px;
 }
 
 .message-success {
     color: #3E8758;
     background-color: #CFF3DA;
-    width: 96%;
-    padding: .5em;
-    margin: 1em;
     border: #3E8758 solid 1px;
-    border-radius: 5px;
 }
 
 .message-warning {
     color: #9F6000;
     background-color: #FCFBC9;
-    width: 96%;
-    padding: .5em;
-    margin: 1em;
     border: #9F6000 solid 1px;
-    border-radius: 5px;
 }
 
 .message-error {
     color: #923147;
     background-color: #FAD3D7;
-    width: 96%;
-    padding: .5em;
-    margin: 1em;
     border: #923147 solid 1px;
-    border-radius: 5px;
+}
+
+.btn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .closebtn1 {
-    margin-left: 15px;
     color: #00529B;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .closebtn2 {
-    margin-left: 15px;
     color: #3E8758;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .closebtn3 {
-    margin-left: 15px;
     color: #9F6000;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .closebtn4 {
-    margin-left: 15px;
     color: #923147;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 }
-
