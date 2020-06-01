@@ -54,6 +54,8 @@ tr:hover {
 }
 
 a:link, a:visited {
+    background:url("https://37.media.tumblr.com/0123e78c54885d25cc736375fbfe7937/tumblr_n5e5ziOZAQ1qza1qzo1_500.gif");
+    background-size: 250px;
     background-color: #008559;
     color: white;
     padding: 14px 25px;
