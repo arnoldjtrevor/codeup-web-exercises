@@ -32,11 +32,11 @@
         </section>
         <section>
         <h2>Company Vision</h2>
-        <img src="https://pbs.twimg.com/media/ECxtzMHWsAAN6NE.jpg" width="625" height="350" alt="Person being kicked across a field">
-        <img src="https://vignette.wikia.nocookie.net/spongebob/images/8/8a/SquidwardPause.jpeg/revision/latest?cb=20160727231902" width="625" height="350" alt="A baby crying">
-            <img src="https://pbs.twimg.com/media/EV0qpfyXkAA7kJB.jpg" width="625" height="350" alt="Homeless Pink Panther day drinking on the street">
-        <img src="https://ih0.redbubble.net/image.1011626960.6311/flat,1000x1000,075,f.u4.jpg" width="625" height="350" alt="Me trying to figure out how to use Github">
-        <h2>Our Product</h2>
+        <img  src="https://pbs.twimg.com/media/ECxtzMHWsAAN6NE.jpg" width="625" height="350" alt="Person being kicked across a field">
+        <img  src="https://vignette.wikia.nocookie.net/spongebob/images/8/8a/SquidwardPause.jpeg/revision/latest?cb=20160727231902" width="625" height="350" alt="A baby crying">
+            <img  src="https://pbs.twimg.com/media/EV0qpfyXkAA7kJB.jpg" width="625" height="350" alt="Homeless Pink Panther day drinking on the street">
+        <img  src="https://ih0.redbubble.net/image.1011626960.6311/flat,1000x1000,075,f.u4.jpg" width="625" height="350" alt="Me trying to figure out how to use Github">
+            <h2>Our Product</h2>
         <table>
             <tr>
                 <th>Plan</th>
@@ -64,5 +64,24 @@
         <br>
         <br> <a href="#top">Go to top of the page</a>
         </section>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex-1].style.display = "block";
+            }
+        </script>
     </body>
 </html>
