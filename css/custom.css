@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+}
+
+.display-4 {
+    position: relative;
+    color: black;
+    background-color: #DDDDDD;
+    background-size: auto;
+    display: block;
+    text-align: center;
+    margin: 30px;
+    opacity: 0.6;
+    width: 100%;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+.jumbotron {
+    background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
+}
