@@ -2,98 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Morning Warmups</title>
 </head>
 <body>
-    <script>
+<script>
     // Write a JavaScript function that takes in a number and returns the number multiplied by 5.
-        function multiplyfive(num) {
-            return num * 5;
-        }
 
-    // Write a function that sings “Happy Birthday” Make it sing to whoever’s birthday it is.
-        function singHappyBirthday(name) {
-            console.log("Happy Birthday to You");
-            console.log("Happy Birthday to You");
-            console.log("Happy Birthday Dear" + name);
-            console.log("Happy Birthday to You!!!");
+    function multiplyNumberByFive(num) {
+        return num * 5;
     }
-            //singHappyBirthday("Vanessa");
 
-    //Write a JS function that will take in a number and from there count the next five numbers.
+    // console.log(multiplyNumberByFive(5));
 
-        function countUp5(num) {
-            for(let i=0; i<5; i++) (
-                console.log(num+i);
-            }
+    //     Write a function that sings “Happy Birthday”
+    // Make it sing to whoever’s birthday it is
+
+    function singHappyBirthday(name) {
+        console.log("Happy Birthday to You,");
+        console.log("Happy Birthday to You,");
+        console.log("Happy Birthday Dear " + name);
+        console.log("Happy Birthday to You!!!");
+    }
+
+    // singHappyBirthday("Vanessa");
+
+    // Write a js function that will take in a number and from there count the next 5 numbers
+
+    function countUp5(num) {
+        for (let i = 0; i < 5; i++) {
+            console.log(num + i);
         }
+    }
 
-            //countUp5(5)
+    // countUp5(5);
 
-    //Write a function that returns the number 7.
-        function returnSeven() {
-            return 7;
-        }
+    // Write a function that returns the number 7.
+    function returnsSeven() {
+        return 7;
+    }
 
-       //console.log(returnSeven())
-
-    //Write a JavaScript function that returns the length of a string passed through it.
-        function lengthOfString(string) {
-            return string.length;
-
-           // console.log(lengthOfString("Howdy Codeup!"));
-        }
-
-    //Write a JavaScript function that returns the number of characters in a string passed through it.
-        function numberOfCharacters(string) {
-            return string.length;
-
-            //console.log(numberOfCharacters("I am so tired this morning"));
-        }
-
-    //Write a Javascript Function that will return the diameter of a circle with a radius of the circle passed through it.
-        function diameterOfCircle(radius) {
-            return radius * 2;
-        }
-
-        //console.log(diameterOfCircle(returnSeven()));
+    // console.log(returnsSeven());
 
 
-    //Write a JavaScript function that returns the square root of the number passed through it.
-        function squareRoot(num) {
-            return Math.sqrt(num);
-        }
+    // Write a JavaScript function that returns the length of a string passed through it.
 
-        //console.log(squareRoot(100));
+    function lengthOfString(string) {
+        return string.length;
+    }
+
+    // console.log(lengthOfString("Howdy Codeup!"));
+
+    // Write a JavaScript function that returns the number of characters in a string passed through it.
+
+    function numberOfCharactersInString(str) {
+        return lengthOfString(str);
+    }
+
+    // console.log(lengthOfString("Howdy Codeup!"));
+
+    // Write a JavaScript function that will return the diameter of a circle with a radius of the circle passed through it.
+    function diameterOfCircle(radius) {
+        return radius * 2;
+    }
+
+    // console.log(diameterOfCircle(returnsSeven()));
 
 
-    //Write a JS function that returns the argument passed.
-        function argumentPassed(Param) {
-            return param;
-        }
+    // Write a JavaScript function that returns the square root of the number passed through it.
 
-    //console.log(argumentPassed("Good Luck on The Quiz"))
+    function squareRoot(num) {
+        return Math.sqrt(num);
+    }
+
+    // console.log(squareRoot(100));
+
+    //     Write a JS function that returns the argument passed.
+
+    function returnArgument(param) {
+        return param;
+    }
+
+    // console.log(returnArgument("Hello Hyperion! Hope you had a great weekend!"));
+
+    // Write a JS function that returns a string representing the type of the argument passed through it.
+
+    function typeOfInput(input) {
+        return typeof input;
+    }
+
+    // console.log(typeOfInput(34));
+    // console.log(typeOfInput("Craig"));
+
+    // Write a JavaScript function that returns the boolean true if a number passed through it is even.
+
+    function isEven(num) {
+        return num % 2 === 0;
+    }
 
 
-    //Write a JS function that returns a string representing the type of the argument passed through it.
-        function typeOfInput(input) {
-            return typeof input;
-        }
+    function printEvens() {
+        console.log(2);
+        console.log(4);
+        console.log(6);
+        console.log(8);
 
-        //console.log(typeOfInput("Testing 1 2 3"))
+    // Write a function that takes 2 parameters. Starting at the first and counting by the second, will output 5 steps. I.e. countFromBy(10,5) results in:
+    // 10
+    // 15
+    // 20
+    // 25
+    // 30
 
-    //Write a JavaScript function that returns the boolean true if a number passed through it is even.
-        function isEven(num) {
-            return num % 2 === 0;
-        }
 
-        //console.log(isEven(42));
-        //console.log(isEven(21));
-
-    //Print the first ten even numbers at least 3 times (preferably using different strategies)
-        function isEven(num) {
-            return num
-        }
-    </script>
+</script>
 </body>
 </html>
