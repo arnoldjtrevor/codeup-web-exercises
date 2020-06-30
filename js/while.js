@@ -14,13 +14,27 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 do {
     var conesPurchased = Math.floor(Math.random() * 5) + 1;
     if (conesPurchased > allCones) {
-        var sadConesMessage = "Sorry love, you can't buy " + conesPurchased + " cones, I only have " + allCones + " left ....";
+        var sadConesMessage = "Nuh-uh no, I cannot sell you " + conesPurchased + " cones, I only have " + allCones + " left.";
         console.log(sadConesMessage);
     } else {
         allCones -= conesPurchased;
-        var happyConesMessage = conesPurchased + " cones sold ... " + allCones + " cones to go";
+        var happyConesMessage = "You're buying " + conesPurchased + " cones?! Now I only got " + allCones + " cones left!";
         console.log(happyConesMessage);
     }
 } while (allCones > 0)
 
-console.log("I am now cone-less and in my bag");
+console.log("Aight we're closed I sold all my cones!");
+
+// alt solution
+// var allCones = Math.floor(Math.random() * 50) + 50;
+//
+// do{
+//     let cones = Math.floor(Math.random() * 5) + 1;
+//     if (cones <= allCones) {
+//         allCones = allCones - cones;
+//         console.log(cones + " cones sold...")
+//     } else {
+//         console.log("Cannot sell you " + cones + " cones I only have" + allCones + "...");
+//     }
+// } while (allCones > 0);
+// console.log("Yay! I sold them all!")

@@ -23,6 +23,6 @@ for (var i = 1; i <= 50; i++) {
     if (i === userNumber) {
         console.log("Chile anyways.. skipping number: " + i);
     } else {
-        console.log("Here is an odd number: " + i);
+        console.log("Here is a GOOD odd number: " + i);
     }
 }

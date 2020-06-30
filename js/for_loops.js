@@ -28,6 +28,6 @@ for(var i = 1; i < 10; i++){
 
 // Create a for loop that uses console.log to create the output shown below. (100, 95, 90, 85, ... 5")
 
-for(var i = 100; i >= 5; i-=5){
+for(var i = 100; i >0; i-=5){
     console.log(i);
 }
