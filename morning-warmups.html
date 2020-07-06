@@ -7,147 +7,123 @@
 <body>
 <script>
     // Write a JavaScript function that takes in a number and returns the number multiplied by 5.
-
     function multiplyNumberByFive(num) {
         return num * 5;
     }
-
     // console.log(multiplyNumberByFive(5));
 
-    //     Write a function that sings “Happy Birthday”
-    // Make it sing to whoever’s birthday it is
 
+    // Write a function that sings “Happy Birthday” & make it sing to whoever’s birthday it is.
     function singHappyBirthday(name) {
         console.log("Happy Birthday to You,");
         console.log("Happy Birthday to You,");
-        console.log("Happy Birthday Dear " + name);
+        console.log("Happy Birthday Dear, " + name + "...");
         console.log("Happy Birthday to You!!!");
     }
+    // singHappyBirthday("Mr.President");
 
-    // singHappyBirthday("Vanessa");
 
     // Write a js function that will take in a number and from there count the next 5 numbers
-
     function countUp5(num) {
         for (let i = 0; i < 5; i++) {
             console.log(num + i);
         }
     }
-
     // countUp5(5);
+
 
     // Write a function that returns the number 7.
     function returnsSeven() {
         return 7;
     }
-
     // console.log(returnsSeven());
 
 
     // Write a JavaScript function that returns the length of a string passed through it.
-
     function lengthOfString(string) {
         return string.length;
     }
+    // console.log(lengthOfString("It's me, Jessie, and Ari if they test me they sorry!"));
 
-    // console.log(lengthOfString("Howdy Codeup!"));
 
     // Write a JavaScript function that returns the number of characters in a string passed through it.
-
     function numberOfCharactersInString(str) {
         return lengthOfString(str);
     }
+    // console.log(lengthOfString("It's me, Jessie, and Ari if they test me they sorry!"));
 
-    // console.log(lengthOfString("Howdy Codeup!"));
 
     // Write a JavaScript function that will return the diameter of a circle with a radius of the circle passed through it.
     function diameterOfCircle(radius) {
         return radius * 2;
     }
-
-<<<<<<< HEAD
     // console.log(diameterOfCircle(returnsSeven()));
 
 
     // Write a JavaScript function that returns the square root of the number passed through it.
-
     function squareRoot(num) {
         return Math.sqrt(num);
     }
+    //console.log(squareRoot(9));
 
-    // console.log(squareRoot(100));
 
-    //     Write a JS function that returns the argument passed.
-
+    // Write a JavaScript function that returns the argument passed.
     function returnArgument(param) {
         return param;
     }
+    // console.log(returnArgument("I get it cracking like a bad back!"));
 
-    // console.log(returnArgument("Hello Hyperion! Hope you had a great weekend!"));
 
     // Write a JS function that returns a string representing the type of the argument passed through it.
-
     function typeOfInput(input) {
         return typeof input;
     }
+    // console.log(typeOfInput(97));
+    // console.log(typeOfInput("Trevor"));
 
-    // console.log(typeOfInput(34));
-    // console.log(typeOfInput("Craig"));
 
     // Write a JavaScript function that returns the boolean true if a number passed through it is even.
-
     function isEven(num) {
         return num % 2 === 0;
     }
+    // console.log(isEven(44));
+    // console.log(isEven(37));
 
 
-    function printEvens() {
-        console.log(2);
-        console.log(4);
-        console.log(6);
-        console.log(8);
+    // Write a function that takes 2 parameters. Starting at the first and counting by the second, will output 5 steps.
+    const countFromBy = function(num1, num2) {
+        console.log(num1);
+        console.log(num1 + num2);
+        console.log(num1 + 2 * num2);
+        console.log(num1 + 3 * num2);
+        console.log(num1 + 4 * num2);
+    }
+    // countFromBy(2, 4);
 
-    // Write a function that takes 2 parameters. Starting at the first and counting by the second, will output 5 steps. I.e. countFromBy(10,5) results in:
-    // 10
-    // 15
-    // 20
-    // 25
-    // 30
 
-        function eightBall(luckyNumber) {
-            switch (luckyNumber) {
-                case 1:
-                    return ("As I see it, yes.");
-                case 2:
-                    return ("Ask again later.");
-                case 3:
-                    return ("Better not tell you now.");
-                case 4:
-                    return ("Cannot predict now.");
-                case 5:
-                    return ("Concentrate and ask again.");
-                case 6:
-                    return ("Don’t count on it.");
-                case 7:
-                    return ("Outlook not so good.");
-                case 8:
-                    return ("Outlook is good.");
-            }
+    // Write a JS function called magic8Ball that takes in one number as a parameter. The return value should be one of the following strings that correlate to the number passed in.
+    let luckyNumber = Math.floor((Math.random() * 8) + 1)
+    function magic8Ball(luckyNumber) {
+        switch(luckyNumber) {
+            case 1:
+                return ("As I see it, yes");
+            case 2:
+                return ("Ask again later");
+            case 3:
+                return ("Better not tell you now");
+            case 4:
+                return ("Cannot predict now");
+            case 5:
+                return ("Concentrate and ask again");
+            case 6:
+                return ("Don't count on it");
+            case 7:
+                return ("Outlook not so good");
+            case 8:
+                return ("Outlook is good");
         }
+    }
+    // alert(magic8Ball(luckyNumber));
 </script>
-=======
-        function countUp5(num) {
-            for(let i=0; i<5; i++) (
-                console.log(num+i);
-            }
-        }
-
-            //countUp5(5)
-
-    //Write a function that returns the number 7.
-        function returnSeven() {
-            return 7;
-        }
-
 </body>
 </html>

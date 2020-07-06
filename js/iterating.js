@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -6,18 +6,27 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ["trevor", "nicki minaj", "beyonce", "lady gaga"];
+
+    var names = ["treva lipa", "trevi minaj", "trevyonce", "lady trevtrev"];
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
 
+    console.log(names.length);
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+    ``
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
     /**
      * TODO:
@@ -25,10 +34,18 @@
      * array.
      */
 
+    for(var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name) {
+        console.log(name);
+    })
 
     /**
      * TODO:
@@ -45,3 +62,4 @@
      */
 
 })();
+
