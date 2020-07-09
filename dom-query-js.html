@@ -37,16 +37,16 @@
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = '#0000FF';
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
+        var allItems = document.getElementsByTagName('li');
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i++) {
+        for (var i = 0; i < allItems.length; i++) {
             if ((i + 1) % 2 === 0) {
-                listItems[i].style.color = 'grey';
+                allItems[i].style.color = 'grey';
             }
-            if (listItems[i].hasAttribute('data-dbid')) {
-                if (listItems[i].getAttribute('data-dbid') === '1') {
-                    listItems[i].style.color = 'blue';
+            if (allItems[i].hasAttribute('data-dbid')) {
+                if (allItems[i].getAttribute('data-dbid') === '1') {
+                    allItems[i].style.color = 'blue';
                 }
             }
         }
