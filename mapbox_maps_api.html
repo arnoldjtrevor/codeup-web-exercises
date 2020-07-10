@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2F0B1F;
+            font-family: 'Alegreya Sans', sans-serif;
+
+        }
+        h1 {
+            color: #E566AC;
+            text-align: center;
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+        .btn-primary {
+            background-color: #A5236A;
+            color: #2F0B1F;
+            margin-bottom: .5em;
+            font-family: 'Alegreya Sans', sans-serif;
+            width: 100px;
+            padding: 5px;
+            font-size: 15px;
+            border: none;
+            border-radius: 95px;
+        }
+        .btn-primary:hover {
+            background-color: #F2B1D4;
+            color: #A5236A;
+            margin-bottom: .5em;
+            font-family: 'Alegreya Sans', sans-serif;
+            width: 100px;
+            padding: 5px;
+            font-size: 15px;
+            border: none;
+            border-radius: 95px;
+        }
+        .zoom {
+            color: #2F0B1F;
+            background-color: #F2B1D4;
+        }
+        .marker {
+            background-image: url('https://img.icons8.com/cotton/2x/like.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .mapboxgl-popup {
+            max-width: 300px;
+            background-color: #DC2E8D;
+        }
+        .mapboxgl-popup-content {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F2B1D4;
+            color: #A5236A;
+        }
+    </style>
+</head>
+<body>
+
+<h1>eat it eat it eat it </h1>
+<!-- Buttons and Zoom Options -->
+<div class="container">
+    <div class="row">
+        <button type="button" class="btn btn-primary" id="reset-button">Reset</button>
+        <select id="zoom-select" class="zoom">
+            <option selected disabled>Zoom Level</option>
+            <option value="5">Zoom Level 5</option>
+            <option value="15">Zoom Level 15</option>
+            <option value="20">Zoom Level 20</option>
+        </select>
+    </div>
+</div>
+
+<!-- Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+
+<script>
+    // Map Code
+    mapboxgl.accessToken = mapboxKey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/trevor-arnold/ckcfbd6a301vl1ikb5gk1gxq8',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    // Zoom Function
+    var zoomSelect = document.getElementById("zoom-select")
+    zoomSelect.addEventListener("change", function (event) {
+        var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value
+        map.setZoom(parseInt(zoomValue))
+    })
+
+    // Reset Button
+    var resetButton = document.getElementById("reset-button")
+    resetButton.addEventListener("click", function (event) {
+        map.setZoom(10);
+        map.setCenter([-98.4916, 29.4252])
+        map.setStyle('mapbox://styles/trevor-arnold/ckcfbd6a301vl1ikb5gk1gxq8')
+    })
+
+    // Favorite Restaurants
+    var geojson = {
+        type: 'FeatureCollection',
+        features: [{
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-98.326260, 29.575130]
+            },
+            properties: {
+                title: 'Pluckers Wing Bar',
+                description: "Omggggg Pluckerssss. Okay, listen, I don't eat boned wings because I don't have the time, patience, or savagery to chew around a tiny little bone like that so I always order the boneless wings and guess what? Those things are WHOLE CHICKEN STRIPS! Like ENTIREEE chicken strips covered in sauce!!!!! Who even thinks of that?!?!? Geniuses do, that's who! I usually get the Ginger Peach Sriracha sauce with them, it tastes exactly what it sounds like... iconic and legendary status! And their drinks?!?!? Chile, let me tell you about the Psychedelic Frog... she is made with 4 different types of liquor!! FOUR!!! IV!!! Yes I put it in Roman Numerals so you can understand how much of a timeless classic this is!!! And it's neon green!!! I feel like Bill Nye The Science guy when I start sipping on it, that's how neon green it is! Also Pluckers fired my friend, Tito, and they would like all the Tweets I made dragging Tito for getting fired!! That is so coldhearted and shady, I can't help but to spend my money there!"
+            }
+        },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-98.598518, 29.607731]
+                },
+                properties: {
+                    title: 'Bakery Lorraine at the Rim',
+                    description: "Okay so I worked here for a fat minute and let me tell y'all, this place is I C O N I C!!!! The macarons made me realize how disgusting and embarrassing macarons are everywhere else, including Disney World! The coffee is made with the same beans Local Coffee uses, so you already know that hits different. Their food is to die for. I miss getting Turkey Pesto with a tomato soup for free everyday, like I might go reapply when I finish this assignment, it's that good."
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-98.581413, 29.547930]
+                },
+                properties: {
+                    title: 'Fire Wok',
+                    description: "To be real with y'all, I do not know if I come here because it's convenient or if I genuinely like the place, but I still come here either way. I'm very picky about my Chinese food. Very picky. Like the shape of the little nuggets you cover in sauce can make or break it. This place gets it all right. Their Orange Blossom Chicken and Sesame Chicken is the closest thing I have ever felt to unconditional love. Also I ran into one of the workers at a bar and bought him a drink because they were 75 cents and now I get free vegetables on my meals for life. Quite the serve, quite the serve indeed."
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-98.564300, 29.532020]
+                },
+                properties: {
+                    title: 'Mama Margies Mexican Restaurant',
+                    description: "Do NOT get me STARTED! do not get me started.. okay I am starting. This place has defined the most important years of my life, period. No commas, no question marks, PERIOD. From 2015 to 2017, if my coworkers from Six Flags and I decided we wanted to grub, this would be where we grubbed. From 2018 to pre-quarantine 2020, if my friends and I were out late and everything was closed, we'd go here instead of IHOPenot and What-A-Flop. When I went here for my 21st, the lady at the cash register recognized me. Want to know who she was? One of my old coworkers at Chic-Fil-A from when I was 15. They never invited me with them anywhere because of how young I was!! Then six years later, one of them had to serve me my first margarita!!! At Mama Margies!!! Period!!! This place is historical really. Open your textbooks to Page 1, Chapter 1, Section 1 class because this place is HISTORY!"
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-98.4944174, 29.443017]
+                },
+                properties: {
+                    title: 'Luther\'s Bar and Grill',
+                    description: "I might get emotional talking about this one, fair warning. This place is a sanctuary, to me personally. I would come here once a week for months at a time while Drag Race was airing. They do like little viewing parties there for it and it's amazing. I never understood the concept of sports bars until I got my own version of it. Their chicken strips are iconic. You get those with sweet potato fries, fried okra, and a horchata margarita and you've got yourself a kings feast! If I were to ever be given the death penalty for crimes i did not commit, I wouldn't even be mad as long as I get to order all that for my last meal!!! Not mad one bit!!!"
+                }
+            }
+        ]
+    };
+
+    // Markers
+    geojson.features.forEach(function (marker) {
+        var el = document.createElement('div');
+        el.className = 'marker';
+        new mapboxgl.Marker(el)
+            .setLngLat(marker.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({offset: 25}) // add popups
+                .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+            .addTo(map);
+    });
+</script>
+</body>
+</html>
