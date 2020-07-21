@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #210E5E;
+            background-image: url("https://thumbs.gfycat.com/CanineSameEwe-small.gif");
+            background-size: cover;
+        }
+
+        h1 {
+            color: #E916CB;
+            font-family: 'VT323', monospace;
+            font-size: 35px;
+        }
+
+        #tvBox {
+            position: fixed;
+            top: 50px;
+            left: 200px;
+            z-index: 30;
+        }
+
+        #konamiVideo {
+            position: fixed;
+            top: 70px;
+            left: 230px;
+            z-index: 20;
+        }
+
+        #windVideo {
+            position: fixed;
+            top: 70px;
+            left: 230px;
+            z-index: 20;
+        }
+
+        #order66Video {
+            position: fixed;
+            top: 70px;
+            left: 230px;
+            z-index: 20;
+        }
+
+        #static {
+            position: fixed;
+            top: 70px;
+            left: 230px;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<!-- Body Elements -->
+<body>
+<h1 style="text-align: center">Konami Code</h1>
+<!-- TV Box and Static -->
+<img id="tvBox" src="https://pngimg.com/uploads/tv/tv_PNG39234.png" ("text-align", "center")>
+<img id="static" src="https://media1.tenor.com/images/5a934e84f67d2a61a118ec95b1d6cb74/tenor.gif?itemid=11312357"
+     height="487" width="650">
+<!-- Videos -->
+<video id="konamiVideo" width="650" height="487">
+    <source src="video/piggy.mp4" type="video/mp4">
+</video>
+<video id="windVideo" width="650" height="487">
+    <source src="video/wind.mp4" type="video/mp4">
+</video>
+<video id="order66Video" width="650" height="487">
+    <source src="video/order66.mp4" type="video/mp4">
+</video>
+
+<!-- JavaScript -->
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    // Hide Videos //
+    $("#konamiVideo").hide();
+    $("#windVideo").hide();
+    $("#order66Video").hide();
+
+    (function () {
+        "use strict";
+        // Konami Code //
+        var konami = {
+            sequence: [
+                'ArrowUp',
+                'ArrowUp',
+                'ArrowDown',
+                'ArrowDown',
+                'ArrowLeft',
+                'ArrowRight',
+                'ArrowLeft',
+                'ArrowRight',
+                'b',
+                'a',
+                'Enter'
+            ],
+            index: 0
+        };
+
+        // Konami Code Function //
+        $(document).keydown(function (e) {
+            console.log(e.key.toString());
+            konami.sequence[konami.index] === e.key ? konami.index += 1 : konami.index = 0;
+            if (konami.index === konami.sequence.length) {
+                alert("YOU HAVE 30 LIVES AND NICKI MINAJ IS HAVING A BABY!");
+                konami.index = 0;
+                $("#konamiVideo").show().on('ended', function () {
+                    $(this).hide();
+                });
+                playVid();
+            }
+        });
+
+        // Wind Code //
+        var wind = {
+            sequence: [
+                'ArrowUp',
+                'ArrowLeft',
+                'ArrowRight',
+                'Enter'
+            ],
+            index: 0
+        };
+
+        // Wind Code Function //
+        $(document).keydown(function (e) {
+            console.log(e.key.toString());
+            wind.sequence[wind.index] === e.key ? wind.index += 1 : wind.index = 0;
+            if (wind.index === wind.sequence.length) {
+                alert("You have played the Wind's Requiem");
+                wind.index = 0;
+                $("#windVideo").show().on('ended', function () {
+                    $(this).hide();
+                });
+                playVid2();
+            }
+        });
+
+        // Order 66 //
+        var order66 = {
+            sequence: [
+                'o',
+                'r',
+                'd',
+                'e',
+                'r',
+                '6',
+                '6',
+                'Enter'
+            ],
+            index: 0
+        };
+
+        // Executing Order 66 //
+        $(document).keydown(function (e) {
+            console.log(e.key.toString());
+            order66.sequence[order66.index] === e.key ? order66.index += 1 : order66.index = 0;
+            if (order66.index === order66.sequence.length) {
+                alert("You were the Chosen One! You were supposed to destroy the Sith, not join them.");
+                order66.index = 0;
+                $("#order66Video").show().on('ended', function () {
+                    $(this).hide();
+                });
+                playVid3();
+            }
+        });
+
+
+    })();
+
+    //Gets Each Video and Stores To A Variable + Plays It//
+    var vid = document.getElementById("konamiVideo");
+    function playVid() {
+        vid.play();
+    }
+
+    var vid2 = document.getElementById("windVideo")
+    function playVid2() {
+        vid2.play();
+    }
+
+    var vid3 = document.getElementById("order66Video")
+    function playVid3() {
+        vid3.play();
+    }
+</script>
+</body>
+</html>

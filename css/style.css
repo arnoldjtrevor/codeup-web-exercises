@@ -16,7 +16,7 @@ h2, h3 {
 }
 
 body {
-    background-image: url(https://i.pinimg.com/originals/f8/f4/dd/f8f4ddbcb54eb102d1c4b267e843061a.jpg);
+    background-image: url("https://i.pinimg.com/originals/f8/f4/dd/f8f4ddbcb54eb102d1c4b267e843061a.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
