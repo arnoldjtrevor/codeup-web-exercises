@@ -129,7 +129,7 @@
             console.log(e.key.toString());
             wind.sequence[wind.index] === e.key ? wind.index += 1 : wind.index = 0;
             if (wind.index === wind.sequence.length) {
-                alert("You have played the Wind's Requiem");
+                alert("You have played the Wind's Requiem.");
                 wind.index = 0;
                 $("#windVideo").show().on('ended', function () {
                     $(this).hide();
@@ -166,22 +166,23 @@
                 playVid3();
             }
         });
-
-
     })();
 
     //Gets Each Video and Stores To A Variable + Plays It//
     var vid = document.getElementById("konamiVideo");
+
     function playVid() {
         vid.play();
     }
 
     var vid2 = document.getElementById("windVideo")
+
     function playVid2() {
         vid2.play();
     }
 
     var vid3 = document.getElementById("order66Video")
+
     function playVid3() {
         vid3.play();
     }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp2636472.jpg");
+            background-size: cover;
+            color: #E8E8E0;
+        }
+
+        nav {
+            margin-bottom: 50px;
+            font-family: 'Ranchers', cursive;
+            background-color: #B8D68E;
+            color: #E8E8E0;
+        }
+
+        .card {
+            max-width: 40rem;
+            margin: 0 auto;
+            float: none;
+            margin-bottom: 30px;
+            background-color: #C19AAD;
+        }
+
+        p {
+            font-family: 'Poiret One', cursive;
+            color: #E8E8E0;
+        }
+
+        h3 {
+            font-family: 'Lobster', cursive;
+            color: #E8E8E0;
+            font-size: 30px;
+        }
+
+        .card-columns {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light ">
+    <span class="navbar mb-0 h1">Spongebob Facts!</span>
+</nav>
+
+<div class='card-columns' id="posts">
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    var request = $.get("data/blog.json");
+
+    request.fail(function(jqXHR, status, error) {
+        console.log(status);
+        console.log(error);
+    });
+
+    request.done(function(response) {
+        response.forEach(function(entry) {
+            $("#posts").append("<div class='card border-secondary'><h3 class='card-header  bg-transparent border-secondary'>"
+                + entry.title + "</h3><div class='card-body'><p>" + entry.content + "</p><p>" + entry.categories.join(", ") +
+                "</p></div><div class='card-footer'>" + entry.date + "</div></div>")
+        });
+    })
+
+</script>
+
+</body>
+</html>

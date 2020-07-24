@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        body {
+            background-color: #626262;
+            background-image: url("https://images7.alphacoders.com/333/333462.jpg");
+            background-size: cover;
+        }
+
+        main {
+            font-family: 'Libre Baskerville', serif;
+            color: whitesmoke;
+        }
+
+        html {
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+            align-self: center;
+        }
+
+        dd {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        dt {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .modal-header {
+            padding: 9px 15px;
+            border-bottom: 1px solid #eee;
+            background-color: #010101;
+            text-align: center;
+        }
+
+        .modal-body {
+            padding: 9px 15px;
+            border-bottom: 1px solid #eee;
+            background-color: #010101;
+        }
+
+        .modal-footer {
+            padding: 9px 15px;
+            border-bottom: 1px solid #eee;
+            background-color: #010101;
+        }
+
+        .alert-danger {
+            background-color: #2F0B1F;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<main>
+    <!-- Newsletter Alert -->
+    <div id="newsletter-div" class="alert alert-danger alert-dismissable" role="alert">
+        <h1 id="newsletter-h1">
+            Sign Up Tho... Do That Challenge
+        </h1>
+        <span id="hide-newsletter">
+            X
+        </span>
+    </div>
+    <!-- Newsletter PopUp -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Please register for our site <a href="#!">Here</a></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Never miss a drop of facts about Lady Gaga that may not help you get a higher GPA or a job, but
+                        will help you sleep soundly at night.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQ List -->
+    <div>
+        <h2>LADY GAGA | ERAS</h2>
+        <a href="#">Select to expand info</a>
+        <dl>
+            <dt>The Fame Era</dt>
+            <dd class="invisible">The Fame was Lady Gaga's debut album, and the start of what would be dubbed Lady Gaga's 'Eras'. This album focused heavily on the glamorous aspects of being famous, and how anyone could be or feel famous. The music on this album was heavily influenced by 80's synth dance music and ballads. The singles from this album include "Just Dance", "Beautiful, Dirty, Rich", "Poker Face", "Eh, Eh (Nothing Else I Can Say), "LoveGame", and "Paparazzi". Most of which made it to the Top 10 on Billboard Hot 100 Chart. This era was all about being extra and extravagant, so Lady Gaga appeared
+            </dd>
+            <dt>The Fame Monster</dt>
+            <dd class="invisible">Due to the success of The Fame, Lady Gaga released The Fame Monster EP to build on the themes she had explored on The Fame. However, instead of focusing on the glamorous side of fame, she focused on the dark side of fame and the fears she has about her newfound fame. Each song explored a fear she had. Bad Romance expresses her fear of love, Alejandro expresses her fear of men, Speechless expresses her fear of death, Dance in the Dark expresses her fear of what fame does to people, Telephone expresses her fear of commitment, So Happy I Could Die expresses her fear of being addiction, and Teeth explores her fear of the truth. A notable moment from this era is her iconic meat dress, which she said she wore because "the paparazzi was already treating [her] like a piece of meat".
+            </dd>
+            <dt>Born This Way</dt>
+            <dd class="invisible">Lady Gaga began work on her third studio album while she was touring The Fame Monster Ball. People who worked close with her said she would constantly write and record songs on the road, most of which didn't end up on her 16 track album. Her title track, Born This Way, was a self-love song written for the LGBTQ+ community that she wrote in 10 minutes. Her other single, The Edge of Glory was written as in memory of her grandfather who she claimed was her biggest fan. Though Lady Gaga had always had elaborate videos, she put in work to make sure the music videos for Born This Way were on another level. Her most
+            </dd>
+            <dt>Cheek to Cheek</dt>
+            <dd class="invisible">I hate this album and I have nothing to say about it besides that it is y'alls fault for saying she wasn't a good vocalist. Y'all really made this poor girl release an entire jazz album with Tony Bennett, and for what?
+            </dd>
+            <dt>ARTPOP</dt>
+            <dd class="invisible">Lady Gaga is a very talented writer who puts a lot of thought and meaning behind even
+                her most catchiest songs. Lady Gaga co-wrote and co-produced her debut album, which brought her into the
+                spotlight. She also wrote the famous pride anthem, Born This Way, in just 10 minutes! Though Lady Gaga's music videos were
+            </dd>
+            <dt>Joanne</dt>
+            <dd class="invisible">Lady Gaga's performance of Paparazzi during the 2009 MTV Video Music Awards was a
+                cultural reset if I had ever seen one. After being flamed by tabloids all year for her costumes and
+                antics, Lady Gaga took the stage at the VMA's to show the effects that tabloid media had on artists,
+                like Britney Spears and Lindsay Lohan. Her performance had her pulling all the stunts, like performing a
+                random piano solo and ending the performance with her hanging herself on stage covered in blood. Even
+                the celebrities that scoffed at her when she was announced gave her a standing ovation.
+            </dd>
+            <dt>A Star Is Born</dt>
+            <dd class="invisible">It is no secret that Lady Gaga took heavy inspiration from Madonna, however the
+                respect Gaga holds for Madonna is not mutual. Madonna referred to Lady Gaga as "reductive" and wouldn't
+                elaborate on that any further, insisting us to Google the word. It's okay though, Lady Gaga is not
+                feeding into the drama and ended up getting an Oscar and a Golden Globe! Unlike another pop-singer
+                turned failed actress we all know!
+            </dd>
+            <dt>Chromatica</dt>
+            <dd class="invisible">Lady Gaga has either recorded or scrapped songs with Cher, Kendrick Lamar, Azealia
+                Banks, Rihanna, T.I., Elton John, Paul McCartney, Barbara Streisand, Kanye West, SOPHIE, Zedd, Britney
+                Spears, and Skrillex. Kanye and Gaga were supposed to tour together in 2009, but Gaga ended that after
+                his stunt with Taylor Swift. Telephone was also supposed to be a Britney Spears song featuring Lady
+                Gaga.
+            </dd>
+        </dl>
+        <hr>
+        <!-- Lists -->
+        <div>
+            <h3>Discography</h3>
+            <ul>
+                <li>The Fame</li>
+                <li>The Fame Monster</li>
+                <li>Born This Way</li>
+                <li>ARTPOP</li>
+                <li>Cheek to Cheek</li>
+                <li>Joanne</li>
+                <li>Chromatica</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Acting Credits</h3>
+            <ul>
+                <li>The Countess in American Horror Story: Hotel</li>
+                <li>Scáthach in American Horror Story: Roanoke</li>
+                <li>Ally Maine in A Star Is Born (2020)</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h3>Notable Awards and Accolades</h3>
+            <ul>
+                <li>11 Grammy Awards</li>
+                <li>2 Golden Globes</li>
+                <li>1 Oscar</li>
+                <li>5 No. 1 Hit and 17 Top 10 Hit songs on the Billboard Hot 100</li>
+                <li>6 No. 1 Albums on Billboard 200</li>
+            </ul>
+        </div>
+        <!-- Button Lol-->
+        <button class="violet" type="submit">violet</button>
+    </div>
+</main>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    // Highlights Last Item On List
+    $('.violet').click(function () {
+        $('ul').each(function (i, v) {
+            $(this).children().last().css('background-color', 'violet');
+        });
+    });
+
+    // Makes List Appear
+    $('h3').click(function () {
+        $(this).next().each(function (i, v) {
+            $(this).children().css('font-weight', 'bold');
+        });
+    });
+
+    // Changes Font Color of First Item on List
+    $('li').click(function () {
+        $('ul').each(function (i, v) {
+            $(this).children().first().css('color', 'blue');
+        });
+    });
+
+    // Expands List of FAQs
+    $('a').click(function () {
+        $('dd').toggleClass('invisible');
+    });
+
+    // Hides News Letter
+    $('#hide-newsletter').click(function () {
+        $('#newsletter-div').hide();
+    });
+
+    $('h3+ul').hide();
+
+    $('h3').click(function () {
+        $(this).next().slideToggle();
+    });
+
+    $('#h2-fade').hide();
+
+    setTimeout(function () {
+        $('#myModal').modal('show');
+    }, 8000);
+
+
+</script>
+</body>
+</html>
